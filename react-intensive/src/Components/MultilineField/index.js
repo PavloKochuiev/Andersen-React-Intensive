@@ -5,10 +5,9 @@ class MultilineField extends React.Component {
   render() {
     return (
       <>
-        <p className={styles.title}>{this.props.title}</p>
+        <p className={styles.title}>{this.props.name}</p>
         <textarea
           className={styles.textArea}
-          type={this.props.type}
           placeholder={this.props.name}
           id={this.props.id}
           rows={this.props.rows}

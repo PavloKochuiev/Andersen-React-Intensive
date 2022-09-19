@@ -1,0 +1,18 @@
+.form {
+  width: 600px;
+  background-color: #c6d9fb;
+  border: 1px solid #6187c7;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
