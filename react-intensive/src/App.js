@@ -1,7 +1,13 @@
+import React from 'react';
+import Title from './components/Title';
+import Form from './components/Form';
+import styles from './App.module.css';
+
 function App() {
   return (
-    <div>
-
+    <div className={styles.general}>
+      <Title />
+      <Form />
     </div>
   );
 }

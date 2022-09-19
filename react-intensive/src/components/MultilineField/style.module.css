@@ -1,0 +1,16 @@
+.label {
+  font-size: 16px;
+  padding-bottom: 3px;
+  margin-bottom: 5px;
+}
+
+.input {
+  border-radius: 7px;
+  margin-bottom: 30px;
+  resize: none;
+  font-family: sans-serif;
+  overflow: hidden;
+  border: 2.5px solid grey;
+  padding-top: 10px;
+  padding-left: 5px;
+} 

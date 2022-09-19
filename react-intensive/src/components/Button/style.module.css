@@ -1,0 +1,29 @@
+.input[type='submit'],
+[type='reset'] {
+  align-items: center;
+  padding: 10px 40px;
+  border-radius: 5px;
+  border: 1px solid black;
+  color: #fff;
+  background: #4b91f7;
+}
+
+.input[type='reset'] {
+  background: #85898f;
+}
+
+.input:hover {
+  border: 1px solid #526d70;
+}
+
+.input[type='reset']:hover {
+  border: 1px solid #b1ebf2;
+}
+
+.input[type='submit']:active {
+  color: #526d70;
+}
+
+.input[type='reset']:active {
+  color: #b1ebf2;
+}

@@ -1,0 +1,10 @@
+.general {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0px;
+  max-width: 800px;
+  background-color: #67dff0;
+  border: 3px solid #526d70;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 50px;
+}
