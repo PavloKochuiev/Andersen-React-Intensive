@@ -15,6 +15,7 @@ class Field extends Component {
                 type={item.type}
                 name={item.name}
                 placeholder={item.label}
+                handleChangeInputMask={this.props.handleChangeInputMask}
                 onChange={this.props.handleChange}
               />
             ) : (
@@ -22,42 +23,40 @@ class Field extends Component {
                 className={styles.input}
                 type={item.type}
                 name={item.name}
-                value={this.props.formValues[item.name]}
+                value={this.props.answers[item.name]}
                 placeholder={item.label}
                 onChange={this.props.handleChange}
               />
             )}
-            {this.props.formErrors[item.name] ? <p className={styles.error}>{this.props.formErrors[item.name]}</p> : ''}
+            {this.props.errors[item.name] ? <p className={styles.error}>{this.props.errors[item.name]}</p> : null}
           </div>
         ))}
 
-        {this.props.textareas.map((item, i) => (
+        {this.props.multilineFields.map((item, i) => (
           <div key={i}>
             <label className={styles.label}>{item.label}</label>
             {item.component === 'textarea' ? (
               <textarea
+                rows='7'
                 className={styles.input}
                 name={item.name}
                 placeholder={item.label}
-                value={this.props.formValues[item.name]}
+                value={this.props.answers[item.name]}
                 onChange={(e) => {
                   this.props.handleChange(e);
-                  this.props.textareaLengthHandler(e);
+                  this.props.handleTextareaLenght(e);
                 }}
-                rows='7'
               ></textarea>
-            ) : (
-              ''
-            )}
+            ) : null}
             {this.props.textareaLength[item.name] <= this.props.maxTextareaLength ? (
               <p className={styles.error}>
                 Осталось {this.props.maxTextareaLength - this.props.textareaLength[item.name]}/
-                {this.props.maxTextareaLength}
+                {this.props.maxTextareaLength} символов
               </p>
             ) : (
-              <p className={styles.error}>Превышен лимит символов</p>
+              <p className={styles.error}>Превышен лимит символов!</p>
             )}
-            {this.props.formErrors[item.name] ? <p className={styles.error}>{this.props.formErrors[item.name]}</p> : ''}
+            {this.props.errors[item.name] ? <p className={styles.error}>{this.props.errors[item.name]}</p> : null}
           </div>
         ))}
       </div>

@@ -8,13 +8,7 @@ class Button extends React.Component {
         {this.props.buttons.map((item, i) => (
           <div key={i}>
             {item.type === 'reset' ? (
-              <button
-                className={styles.button}
-                type={item.type}
-                onClick={() => {
-                  this.props.resetFunction();
-                }}
-              >
+              <button className={styles.button} type={item.type} onClick={this.props.handleReset}>
                 {item.name}
               </button>
             ) : (

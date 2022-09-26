@@ -5,7 +5,7 @@ const InputMask = () => {
   const [card, setCard] = useState();
   const inputCard = useRef();
 
-  const handleChange = () => {
+  const handleChangeInputMask = () => {
     const cardValue = inputCard.current.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,4})(\d{0,2})(\d{0,2})/);
     inputCard.current.value = !cardValue[2]
       ? cardValue[1]
@@ -17,12 +17,12 @@ const InputMask = () => {
   };
 
   useEffect(() => {
-    handleChange();
+    handleChangeInputMask();
   }, [card]);
 
   return (
     <>
-      <input className={styles.input} type='text' ref={inputCard} onChange={handleChange} />
+      <input className={styles.input} type='text' ref={inputCard} onChange={handleChangeInputMask} />
     </>
   );
 };
