@@ -1,0 +1,17 @@
+.form {
+  width: 600px;
+  background-color: #c6d9fb;
+  border: 1px solid #6187c7;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.input {
+  font-size: 18px;
+  padding: 2px;
+  width: 600px;
+  font-family: 'Roboto', sans-serif;
+}
