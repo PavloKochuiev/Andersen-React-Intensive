@@ -1,26 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './style.module.css';
 
-class FilledForm extends Component {
-  render() {
-    return (
-      <div>
-        <h1>
-          {this.props.answers['name']} {this.props.answers['surname']}
-        </h1>
-        {this.props.inputs.map((item, i) => (
-          <div key={i} className={styles.input}>
-            {item.label}: {this.props.answers[item.name]}
-          </div>
-        ))}
-        {this.props.multilineFields.map((item, i) => (
-          <div key={i} className={styles.input}>
-            {item.label}: {this.props.answers[item.name]}
-          </div>
-        ))}
-      </div>
-    );
-  }
+function FilledForm({inputs, multilineFields, answers}) {
+  return (
+    <div>
+        <div>
+          <h3>{answers['name']} {answers['surname']}</h3>
+          {inputs.map((item, i) => (
+            <div key={i} className={styles.input}>
+              <div>{item.label}: {answers[item.name]}</div>
+            </div>
+          ))}
+          {multilineFields.map((item, i) => (
+            <div key={i} className={styles.input}>
+              <div>{item.label}: {answers[item.name]}</div>
+            </div>
+          ))}
+        </div>
+    </div>
+  )
 }
 
 export default FilledForm;
